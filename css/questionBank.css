@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif;
+}
+
+body{
+    background-color: #eee;
+    color: #2c2e3e;
+}
+
+@media only screen and (min-width: 0){
+
+    /* navigation panal */
+    nav{
+        background-color: #2c2e3e;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    nav #desktop-menu{
+        display: none;
+    }
+    nav .mobile-menu{
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+    }
+    nav .mobile-menu div{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #eee;
+    }
+    #menu{
+        display: none;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: #2c2e3e;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .menu #clsoebtn{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 3em;
+        color: #eee;
+        cursor: pointer;
+    }
+    .menu .desktop-menu a{
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        width: fit-content;
+    }
+    .menu .desktop-menu a:hover{
+        border-bottom: 1px solid #eee;
+    }
+    .menu .desktop-menu a i{
+        margin-right: 5px;
+    }
+
+    /* exam panal */
+    .exam{
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
+    .exam .links{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+    }
+    .exam .links a{
+        text-decoration: none;
+        color: #2c2e3e;
+        text-transform: uppercase;
+        border-bottom: 1px solid #2c2e3e;
+        width: fit-content;
+        margin: 10px 0;
+    }
+    .exam .links a i{
+        margin-right: 10px;
+    }
+    .exam .links form .input{
+        border: 1px solid #2c2e3e;
+        position: relative;
+        background: transparent;
+    }
+    .exam .links form .input input{
+        padding: 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+    .exam .links form .input button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 15px;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        background-color: #2c2e3e;
+        color: #eee;
+        cursor: pointer;
+        outline: none;
+        border: none;
+    }
+    .exam .links form .input button i{
+        margin-right: 10px;
+    }
+    .exam .paper{
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .exam .paper h2{
+        text-transform: uppercase;
+    }
+    .exam .paper form{
+        width: 100%;
+        border-top: 2px solid #C850C0;
+        border-bottom: 2px solid #4158D0;
+        padding: 10px 0;
+    }
+    .exam .paper form .input{
+        margin: 20px 0;
+    }
+    .exam .paper form .input label{
+        text-transform: uppercase;
+    }
+    .exam .paper form .input .input-fields{
+        width: 100%;
+        border: 1px solid #2c2e3e;
+        position: relative;
+        margin: 10px 0;
+    }
+    .exam .paper form .input .input-fields input{
+        padding: 10px;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.2em;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+    .exam .paper form .input .input-fields input::placeholder{
+        text-transform: uppercase;
+    }
+    .exam .paper form button {
+        background-image: linear-gradient(to right, #2c2e3e 0%, #414345  51%, #2c2e3e  100%)
+    }
+    .exam .paper form button {
+        margin: 10px 0;
+        padding: 10px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: inline-block;
+        outline: none;
+    }
+    .exam .paper form button i{
+        padding-right: 5px;
+    }
+    .exam .paper form button:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Navigation panal */
+    nav{
+        width: 30%;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+    }
+    nav #mobile-menu{
+        display: none;
+    }
+    nav #desktop-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    nav #desktop-menu a{
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    nav #desktop-menu a i{
+        margin-right: 5px;
+    }
+    nav #desktop-menu a:hover{
+        border-right: 5px solid #2c2e3e;
+        background-color: #eee;
+        color: #2c2e3e;
+    }
+    #menu{
+        display: none;
+    }
+
+    /* profile panal */
+    .exam {
+        width: 70%;
+        left: 30%;
+    }
+    .exam .paper, .exam .links{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* Navigation panal */
+    nav{
+        width: 25%;
+    }
+
+    /* profile panal */
+    .exam {
+        width: 75%;
+        left: 25%;
+    }
+    .exam .paper, .exam .links{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /* Navigation panal */
+    nav{
+        width: 20%;
+    }
+
+    /* profile panal */
+    .exam {
+        width: 80%;
+        left: 20%;
+    }
+    .exam .paper, .exam .links{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+
+    /* Navigation panal */
+    nav{
+        width: 15%;
+    }
+
+    /* profile panal */
+    .exam {
+        width: 85%;
+        left: 15%;
+    }
+    .exam .paper, .exam .links{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    /* Navigation panal */
+    nav{
+        width: 10%;
+    }
+
+    /* profile panal */
+    .exam {
+        width: 90%;
+        left: 10%;
+    }
+    .exam .paper, .exam .links{
+        width: 40%;
+    }
+}

@@ -1,0 +1,131 @@
+<web-app>
+
+    <!-- welcome file list -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- admin configuration -->
+    <!-- servlet configuration for admin login -->
+    <servlet>
+        <servlet-name>adminLogin</servlet-name>
+        <servlet-class>adminLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLogin</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for admin reset password mail -->
+    <servlet>
+        <servlet-name>adminMail</servlet-name>
+        <servlet-class>adminMail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminMail</servlet-name>
+        <url-pattern>/adminMail</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for updating admin password -->
+    <servlet>
+        <servlet-name>updateAdminPassword</servlet-name>
+        <servlet-class>updateAdminPassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateAdminPassword</servlet-name>
+        <url-pattern>/updateAdminPassword</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for updating admin record -->
+    <servlet>
+        <servlet-name>updateAdminRecord</servlet-name>
+        <servlet-class>updateAdminRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateAdminRecord</servlet-name>
+        <url-pattern>/updateAdminRecord</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for adding new user record -->
+    <servlet>
+        <servlet-name>addRecord</servlet-name>
+        <servlet-class>addRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addRecord</servlet-name>
+        <url-pattern>/addRecord</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for delete user record -->
+    <servlet>
+        <servlet-name>deleteRecord</servlet-name>
+        <servlet-class>deleteRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteRecord</servlet-name>
+        <url-pattern>/deleteRecord</url-pattern>
+    </servlet-mapping>
+    
+    <!-- servlet configuration for search user record -->
+    <servlet>
+        <servlet-name>searchRecord</servlet-name>
+        <servlet-class>searchRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchRecord</servlet-name>
+        <url-pattern>/searchRecord</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for logging out the admin -->
+    <servlet>
+        <servlet-name>adminLogout</servlet-name>
+        <servlet-class>adminLogout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLogout</servlet-name>
+        <url-pattern>/adminLogout</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for updating user record -->
+    <servlet>
+        <servlet-name>updateUserRecord</servlet-name>
+        <servlet-class>updateUserRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUserRecord</servlet-name>
+        <url-pattern>/updateUserRecord</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for adding exam record -->
+    <servlet>
+        <servlet-name>addExam</servlet-name>
+        <servlet-class>addExam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addExam</servlet-name>
+        <url-pattern>/addExam</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for adding questions to database -->
+    <servlet>
+        <servlet-name>processExam</servlet-name>
+        <servlet-class>processExam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>processExam</servlet-name>
+        <url-pattern>/processExam</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- user configuration -->
+    <!-- servlet configuration for user login -->
+    <servlet>
+        <servlet-name>userLogin</servlet-name>
+        <servlet-class>userLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userLogin</servlet-name>
+        <url-pattern>/userLogin</url-pattern>
+    </servlet-mapping>
+
+</web-app>
