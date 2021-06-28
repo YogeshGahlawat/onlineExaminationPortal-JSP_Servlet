@@ -225,6 +225,9 @@ body{
     .record .profile{
         width: 70%;
     }
+    .record .profile form .input .input-fields input{
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -241,6 +244,9 @@ body{
     }
     .record .profile{
         width: 60%;
+    }
+    .record .profile form .input .input-fields input{
+        font-size: 1.2em;
     }
 }
 

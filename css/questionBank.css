@@ -115,7 +115,7 @@ body{
         border: none;
         outline: none;
         text-transform: uppercase;
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .exam .links form .input button{
         position: absolute;
@@ -261,6 +261,12 @@ body{
     .exam .paper, .exam .links{
         width: 70%;
     }
+    .exam .links form .input input{
+        font-size: 1.1em;
+    }
+    .exam .paper form .input .input-fields input{
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -277,6 +283,12 @@ body{
     }
     .exam .paper, .exam .links{
         width: 60%;
+    }
+    .exam .links form .input input{
+        font-size: 1.2em;
+    }
+    .exam .paper form .input .input-fields input{
+        font-size: 1.2em;
     }
 }
 

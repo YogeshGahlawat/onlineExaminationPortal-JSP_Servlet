@@ -124,7 +124,7 @@ body{
         width: 100%;
         border: none;
         outline: none;
-        font-size: 1.2em;
+        font-size: 1em;
         background-color: transparent;
     }
     .admin .profile form button {
@@ -219,6 +219,9 @@ body{
     .admin .profile{
         width: 70%;
     }
+    .admin .profile form .input .input-fields input{
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -235,6 +238,9 @@ body{
     }
     .admin .profile{
         width: 60%;
+    }
+    .admin .profile form .input .input-fields input{
+        font-size: 1.2em;
     }
 }
 

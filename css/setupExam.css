@@ -120,7 +120,7 @@ body{
         width: 100%;
         border: none;
         outline: none;
-        font-size: 1.2em;
+        font-size: 1em;
         background-color: transparent;
         cursor: text;
     }
@@ -223,6 +223,9 @@ body{
     .addQuestion .exam{
         width: 70%;
     }
+    .addQuestion .exam form .input-field .input select, .addQuestion .exam form .input-field .input select option, .addQuestion .exam form .input-field .input input{
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -239,6 +242,9 @@ body{
     }
     .addQuestion .exam{
         width: 60%;
+    }
+    .addQuestion .exam form .input-field .input select, .addQuestion .exam form .input-field .input select option, .addQuestion .exam form .input-field .input input{
+        font-size: 1.1em;
     }
 }
 
