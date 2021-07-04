@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
 
 *{
-    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif;
+    margin: 0; padding: 0; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif; box-sizing: border-box;
 }
 
 body{
     background-color: #eee;
     color: #2c2e3e;
+    display: flex;
 }
 
-@media only screen and (min-width: 0){
+@media only screen and (min-width: 0) {
+    
+    body{
+        flex-direction: column;
+    }
 
     /* navigation panal */
     nav{
@@ -74,7 +79,7 @@ body{
     }
 
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 100%;
         position: absolute;
         top: 10%;
@@ -84,53 +89,55 @@ body{
         align-items: center;
         z-index: 0;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 100%;
         background-color: #fff;
         padding: 20px;
     }
-    .user .profile h2{
+    .addQuestion .exam h2{
         text-transform: uppercase;
     }
-    .user .profile form{
+    .addQuestion .exam form{
         width: 100%;
         border-top: 2px solid #C850C0;
         border-bottom: 2px solid #4158D0;
         padding: 10px 0;
     }
-    .user .profile form .input{
+    .addQuestion .exam form .input-field{
         margin: 20px 0;
     }
-    .user .profile form .input label{
+    .addQuestion .exam form .input-field label{
         text-transform: uppercase;
     }
-    .user .profile form .input .input-fields{
+    .addQuestion .exam form .input-field .input{
         width: 100%;
         border: 1px solid #2c2e3e;
         position: relative;
         margin: 10px 0;
     }
-    .user .profile form .input .input-fields i{
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 12px;
-        background-color: #2c2e3e;
-        color: #eee;
-    }
-    .user .profile form .input .input-fields input{
+    .addQuestion .exam form .input-field .input select, .addQuestion .exam form .input-field .input select option, .addQuestion .exam form .input-field .input input{
         padding: 10px;
-        padding-left: 60px;
         width: 100%;
         border: none;
         outline: none;
         font-size: 1em;
         background-color: transparent;
+        cursor: text;
     }
-    .user .profile form button {
+    .addQuestion .exam form .input-field .input select{
+        text-transform: uppercase;
+    }
+    .addQuestion .exam form .input-field .input input{
+        text-transform: uppercase;
+    }
+    .addQuestion .exam form .input-field .input select option{
+        background-color: #eee;
+        color: #2c2e3e;
+    }
+    .addQuestion .exam form button {
         background-image: linear-gradient(to right, #2c2e3e 0%, #414345  51%, #2c2e3e  100%)
     }
-    .user .profile form button {
+    .addQuestion .exam form button {
         margin: 10px 0;
         padding: 10px 20px;
         text-align: center;
@@ -143,21 +150,18 @@ body{
         display: inline-block;
         outline: none;
     }
-    .user .profile form button i{
+    .addQuestion .exam form button i{
         padding-right: 5px;
     }
-    .user .profile form button:hover {
+    .addQuestion .exam form button:hover {
         background-position: right center; /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
         cursor: pointer;
     }
-    .user .profile form button:disabled:hover{
-        cursor: not-allowed;
-    }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     /* Navigation panal */
     nav{
@@ -195,11 +199,11 @@ body{
     }
 
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 70%;
         left: 30%;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 80%;
     }
 }
@@ -212,17 +216,14 @@ body{
     }
 
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 75%;
         left: 25%;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 70%;
     }
-    .user .profile form .input .input-fields i{
-        padding: 13.5px;
-    }
-    .user .profile form .input .input-fields input{
+    .addQuestion .exam form .input-field .input select, .addQuestion .exam form .input-field .input select option, .addQuestion .exam form .input-field .input input{
         font-size: 1.1em;
     }
 }
@@ -233,23 +234,17 @@ body{
     nav{
         width: 20%;
     }
-
+    
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 80%;
         left: 20%;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 60%;
     }
-    .user .profile form .input .input-fields i{
-        padding: 15px;
-    }
-    .user .profile form .input .input-fields i{
-        padding: 15px;
-    }
-    .user .profile form .input .input-fields input{
-        font-size: 1.2em;
+    .addQuestion .exam form .input-field .input select, .addQuestion .exam form .input-field .input select option, .addQuestion .exam form .input-field .input input{
+        font-size: 1.1em;
     }
 }
 
@@ -261,11 +256,11 @@ body{
     }
 
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 85%;
         left: 15%;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 50%;
     }
 }
@@ -278,11 +273,11 @@ body{
     }
 
     /* profile panal */
-    .user{
+    .addQuestion{
         width: 90%;
         left: 10%;
     }
-    .user .profile{
+    .addQuestion .exam{
         width: 40%;
     }
 }

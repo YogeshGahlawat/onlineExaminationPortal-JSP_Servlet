@@ -30,7 +30,7 @@
                 <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
                 <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
                 <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>conduct exam</a>
+                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
                 <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
@@ -44,7 +44,7 @@
                 <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
                 <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
                 <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>conduct exam</a>
+                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
                 <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>

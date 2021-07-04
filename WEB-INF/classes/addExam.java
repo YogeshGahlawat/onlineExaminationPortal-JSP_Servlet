@@ -29,13 +29,15 @@ public class addExam extends HttpServlet{
             // creating connection to database
             try{
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
-                PreparedStatement psmt = conn.prepareStatement("insert into exam values(?, ?, ?, ?, ?)");
+                PreparedStatement psmt = conn.prepareStatement("insert into exam(examCode, examTitle, examCreationDate, numberOfQuestions, createdBy, status) values(?, ?, ?, ?, ?, ?)");
                 psmt.setString(1, examCode.toUpperCase());
                 psmt.setString(2, examTitle.toUpperCase());
                 psmt.setDate(3, sqlDate);
                 psmt.setInt(4, number);
-                psmt.setInt(5, Integer.parseInt(session.getAttribute("id").toString()));        
+                psmt.setInt(5, Integer.parseInt(session.getAttribute("id").toString()));
+                psmt.setString(6, "PENDING");
                 psmt.executeUpdate();
+
 
                 out.println("<h3 stle='text-transform: uppercase; text-align: center; color: green;'>question paper added successfully</h3>");
             

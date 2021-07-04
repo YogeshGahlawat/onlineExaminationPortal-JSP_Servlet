@@ -22,7 +22,9 @@ public class userLogin extends HttpServlet{
         try{
 
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
-            PreparedStatement psmt = conn.prepareStatement("select * from user");
+            PreparedStatement psmt = conn.prepareStatement("select * from user where userID = ? and password = ?");
+            psmt.setInt(1, id);
+            psmt.setString(2, password);
             ResultSet rs = psmt.executeQuery();
             while(rs.next()){
                 if( ((id!=0) && (id==rs.getInt("userID"))) && ((!(password.equals(""))) && (password.equals(rs.getString("password")))) ){

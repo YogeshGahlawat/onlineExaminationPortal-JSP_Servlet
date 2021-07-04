@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Online Examination Portal using Java">
     <meta http-equiv="refresh" content="60">
-    <title>ADD QUESTION | EXAMINATION</title>
-    <link rel="stylesheet" href="./css/setupExam.css">
+    <title>SCHEDULE EXAM | EXAMINATION</title>
+    <link rel="stylesheet" href="./css/scheduleExam.css">
     <script src="./js/script.js"></script>
 </head>
 <body>
@@ -54,8 +54,8 @@
         <!-- add question section -->
         <div class="addQuestion">
             <div class="exam">
-                <h2>ADD QUESTION</h2>
-                <form action="processExam" id="container" method="POST">
+                <h2>schedule your Exam</h2>
+                <form action="scheduleExam" id="container" method="POST">
                     <div class="input-field">
                         <label for="">Select exam</label>
                         <div class="input">
@@ -84,48 +84,27 @@
                         </div>
                     </div>
                     <div class="input-field">
-                        <label for="">Question statement</label>
+                        <label for="">exam date</label>
                         <div class="input">
-                            <input type="text" name="statement" id="" placeholder="question statement">
+                            <input type="date" name="startDate" id="" placeholder="exam start date">
                         </div>
                     </div>
 
                     <div class="input-field">
-                        <label for="">option 1</label>
+                        <label for="">exam start time</label>
                         <div class="input">
-                            <input type="text" name="option1" id="" placeholder="option1">
+                            <input type="time" name="startTime" id="" placeholder="exam start time">
                         </div>
                     </div>
 
                     <div class="input-field">
-                        <label for="">option 2</label>
+                        <label for="">exam end time</label>
                         <div class="input">
-                            <input type="text" name="option2" id="" placeholder="option2">
+                            <input type="time" name="endTime" id="" placeholder="exam end time">
                         </div>
                     </div>
 
-                    <div class="input-field">
-                        <label for="">option 3</label>
-                        <div class="input">
-                            <input type="text" name="option3" id="" placeholder="option3">
-                        </div>
-                    </div>
-
-                    <div class="input-field">
-                        <label for="">option 4</label>
-                        <div class="input">
-                            <input type="text" name="option4" id="" placeholder="option4">
-                        </div>
-                    </div>
-
-                    <div class="input-field">
-                        <label for="">correct option</label>
-                        <div class="input">
-                            <input type="text" name="correctOption" id="" placeholder="correct option">
-                        </div>
-                    </div>
-
-                    <button type="submit">add question</button>
+                    <button type="submit">schedule Exam</button>
                 </form>
             </div>
         </div>

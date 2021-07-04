@@ -30,7 +30,7 @@
                 <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
                 <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
                 <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>conduct exam</a>
+                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
                 <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
@@ -44,7 +44,7 @@
                 <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
                 <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
                 <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>conduct exam</a>
+                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
                 <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
@@ -52,8 +52,8 @@
         <!-- new user profile section -->
         <div class="exam">
             <div class="links">
-                <a href="searchExam"><i class="fas fa-list"></i>list all exams</a>
-                <form action="searchExam" method="POST">
+                <a href="listExam.jsp"><i class="fas fa-list"></i>list all exams</a>
+                <form action="searchExam.jsp" method="POST">
                     <div class="input" title="EXAMCODE FOR SEARCHING">
                         <input type="text" name="searchExam" id="searchExam" placeholder="search exam">
                         <button type="submit"><i class="fas fa-search"></i>Search</button>

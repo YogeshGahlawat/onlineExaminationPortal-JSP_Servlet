@@ -116,6 +116,16 @@
         <url-pattern>/processExam</url-pattern>
     </servlet-mapping>
 
+    <!-- servlet configuration for scheduling exam to portal -->
+    <servlet>
+        <servlet-name>scheduleExam</servlet-name>
+        <servlet-class>scheduleExam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>scheduleExam</servlet-name>
+        <url-pattern>/scheduleExam</url-pattern>
+    </servlet-mapping>
+
 
     <!-- user configuration -->
     <!-- servlet configuration for user login -->
@@ -127,5 +137,26 @@
         <servlet-name>userLogin</servlet-name>
         <url-pattern>/userLogin</url-pattern>
     </servlet-mapping>
+
+    <!-- servlet configuration for admin reset password mail -->
+    <servlet>
+        <servlet-name>userMail</servlet-name>
+        <servlet-class>userMail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userMail</servlet-name>
+        <url-pattern>/userMail</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for updating admin password -->
+    <servlet>
+        <servlet-name>updateUserPassword</servlet-name>
+        <servlet-class>updateUserPassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUserPassword</servlet-name>
+        <url-pattern>/updateUserPassword</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
