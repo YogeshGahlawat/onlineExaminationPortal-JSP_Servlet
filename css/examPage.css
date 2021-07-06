@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif;
+}
+
+body{
+    background-color: #eee;
+    color: #2c2e3e;
+}
+
+@media only screen and (min-width: 0){
+
+    /* navigation panal */
+    nav{
+        background-color: #2c2e3e;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    nav #desktop-menu{
+        display: none;
+    }
+    nav .mobile-menu{
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+    }
+    nav .mobile-menu div{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #eee;
+    }
+    #menu{
+        display: none;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: #2c2e3e;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .menu #clsoebtn{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 3em;
+        color: #eee;
+        cursor: pointer;
+    }
+    .menu .desktop-menu a{
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        width: fit-content;
+    }
+    .menu .desktop-menu a:hover{
+        border-bottom: 1px solid #eee;
+    }
+    .menu .desktop-menu a i{
+        margin-right: 5px;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
+    .exam .instructions{
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .exam .instructions h2{
+        text-transform: uppercase;
+    }
+    .exam .instructions ol{
+        padding: 10px;
+        margin: 20px 0 10px;
+        text-transform: uppercase;
+    }
+    .exam{
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        text-transform: uppercase;
+    }
+    .exam .instructions{
+        overflow: auto;
+        width: fit-content;
+        height: fit-content;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .exam .instructions table{
+        margin-top: 10px;
+        border: 1px solid #2c2e3e;
+        border-collapse: collapse;
+    }
+    .exam .instructions table th{
+        background-color: #2c2e3e;
+        color: #fff;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+    }
+    .exam .instructions table td{
+        padding: 5px 10px;
+        border: 1px solid #2c2e3e;
+    }
+    .exam .instructions table td a{
+        color: #2c2e3e;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Navigation panal */
+    nav{
+        width: 30%;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+    }
+    nav #mobile-menu{
+        display: none;
+    }
+    nav #desktop-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    nav #desktop-menu a{
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    nav #desktop-menu a i{
+        margin-right: 5px;
+    }
+    nav #desktop-menu a:hover{
+        border-right: 5px solid #2c2e3e;
+        background-color: #eee;
+        color: #2c2e3e;
+    }
+    #menu{
+        display: none;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 70%;
+        left: 30%;
+    }
+    .exam .instructions{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* Navigation panal */
+    nav{
+        width: 25%;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 75%;
+        left: 25%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /* Navigation panal */
+    nav{
+        width: 20%;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 80%;
+        left: 20%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+
+    /* Navigation panal */
+    nav{
+        width: 15%;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 85%;
+        left: 15%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    /* Navigation panal */
+    nav{
+        width: 10%;
+    }
+
+    /* profile panal */
+    .exam{
+        width: 90%;
+        left: 10%;
+    }
+}

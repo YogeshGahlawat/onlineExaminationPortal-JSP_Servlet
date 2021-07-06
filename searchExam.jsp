@@ -61,6 +61,9 @@
                         <th>s. no.</th>
                         <th>examcode</th>
                         <th>exam title</th>
+                        <th>exam date</th>
+                        <th>exma start time</th>
+                        <th>exam end time</th>
                         <th>number of questions</th>
                         <th>status</th>
                         <!-- <th>operation</th> -->
@@ -71,8 +74,9 @@
                         int count = 1;
                         try{
                             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
-                            PreparedStatement psmt = conn.prepareStatement("select * from exam where examCode = ?");
+                            PreparedStatement psmt = conn.prepareStatement("select exam.examCode , examTitle, examDate, startTime, endTime, numberOfQuestions, status from exam, schedule where exam.examCode = ? and schedule.examCode = ?");
                             psmt.setString(1, examCode);
+                            psmt.setString(2, examCode);
                             ResultSet rs = psmt.executeQuery(); 
                             while(rs.next()){
                                 %>
@@ -80,6 +84,9 @@
                                     <td><%=count%></td>
                                     <td><%=rs.getString("examCode")%></td>
                                     <td><%=rs.getString("examTitle")%></td>
+                                    <td><%=rs.getDate("examDate")%></td>
+                                    <td><%=rs.getTime("startTime")%></td>
+                                    <td><%=rs.getTime("endTime")%></td>
                                     <td><%=rs.getString("numberOfQuestions")%></td>
                                     <td><%=rs.getString("status")%></td>
                                     <!-- <td>

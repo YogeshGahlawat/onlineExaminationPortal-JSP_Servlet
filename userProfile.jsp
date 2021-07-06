@@ -25,9 +25,9 @@
             <div class="desktop-menu" id="desktop-menu">
                 <a href="userPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
                 <a href="userProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
-                <a href="#"><i class="fas fa-plus"></i>enroll exam</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>exam date</a>
-                <a href="#"><i class="fas fa-play"></i>start exam</a>
+                <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
+                <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
+                <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
                 <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
@@ -36,9 +36,9 @@
             <div class="desktop-menu">
                 <a href="userPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
                 <a href="userProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
-                <a href="#"><i class="fas fa-plus"></i>enroll exam</a>
-                <a href="#"><i class="fas fa-calendar-alt"></i>exam date</a>
-                <a href="#"><i class="fas fa-play"></i>start exam</a>
+                <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
+                <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
+                <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
                 <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>

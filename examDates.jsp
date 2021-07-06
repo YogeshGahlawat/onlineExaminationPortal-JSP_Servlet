@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXAM LIST | EXAMINATION</title>
-    <link rel="stylesheet" href="./css/listExam.css">
+    <link rel="stylesheet" href="./css/examDates.css">
     <script src="./js/script.js"></script>
 </head>
 <body>
@@ -26,70 +26,53 @@
                 <div id="bar3"></div>
             </div>
             <div class="desktop-menu" id="desktop-menu">
-                <a href="adminPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
-                <a href="adminProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
-                <a href="addRecord.jsp"><i class="fas fa-plus"></i>add record</a>
-                <a href="deleteRecord.jsp"><i class="fas fa-trash"></i>delete record</a>
-                <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
-                <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
-                <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
-                <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="userProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
+                <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
+                <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
+                <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
         <div class="menu" id="menu">
             <div id="clsoebtn" onclick="hideMenu()">&times;</div>
             <div class="desktop-menu">
-                <a href="adminPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
-                <a href="adminProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
-                <a href="addRecord.jsp"><i class="fas fa-plus"></i>add record</a>
-                <a href="deleteRecord.jsp"><i class="fas fa-trash"></i>delete record</a>
-                <a href="searchRecord.jsp"><i class="fas fa-search"></i>search record</a>
-                <a href="questionBank.jsp"><i class="fas fa-folder"></i>question bank</a>
-                <a href="setupExam.jsp"><i class="fas fa-file"></i>exam paper</a>
-                <a href="scheduleExam.jsp"><i class="fas fa-calendar-alt"></i>conduct exam</a>
-                <a href="adminLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userPage.jsp"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="userProfile.jsp"><i class="fas fa-user-tie"></i>profile</a>
+                <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
+                <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
+                <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
 
         <!-- generating exam List -->
         <div class="examList">
             <div class="list">
-                <h3>list of exams</h3>
+                <h3>exam schedule</h3>
                 <table>
                     <tr>
                         <th>s. no.</th>
-                        <th>examcode</th>
-                        <th>exam title</th>
+                        <th>exam code</th>
                         <th>exam date</th>
-                        <th>exma start time</th>
+                        <th>exam start time</th>
                         <th>exam end time</th>
-                        <th>number of questions</th>
-                        <th>status</th>
-                        <!-- <th>operation</th> -->
                     </tr>
                     <%
                         int count = 1;
                         try{
                             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
-                            PreparedStatement psmt = conn.prepareStatement("select exam.examCode , examTitle, examDate, startTime, endTime, numberOfQuestions, status from exam, schedule order by examDate");
+                            PreparedStatement psmt = conn.prepareStatement("select schedule.examCode, examDate, startTime , endTime from schedule, enrollment where schedule.examCode = enrollment.examCode and userID = ? group by examCode order by examDate, startTime, endTime asc");
+                            psmt.setInt(1, Integer.parseInt(session.getAttribute("id").toString()));
                             ResultSet rs = psmt.executeQuery(); 
                             while(rs.next()){
                                 %>
                                 <tr>
                                     <td><%=count%></td>
                                     <td><%=rs.getString("examCode")%></td>
-                                    <td><%=rs.getString("examTitle")%></td>
                                     <td><%=rs.getDate("examDate")%></td>
                                     <td><%=rs.getTime("startTime")%></td>
                                     <td><%=rs.getTime("endTime")%></td>
-                                    <td><%=rs.getString("numberOfQuestions")%></td>
-                                    <td><%=rs.getString("status")%></td>
-                                    <!-- <td>
-                                        <a href="" title="EXAM PREVIEW"><i class="fas fa-play"></i></a>
-                                        <a href="" title="EDIT EXAM"><i class="fas fa-edit"></i></a>
-                                        <a href="" title="DELETE EXAM"><i class="fas fa-trash"></i></a>
-                                    </td> -->
                                 </tr>
                                 <%
                                 count+=1;
@@ -109,7 +92,7 @@
             session.invalidate();
             response.setHeader("Cache-Control", "no-cache, no-store");
             response.setDateHeader("Expires", 0);
-            response.sendRedirect("adminLogin.html");
+            response.sendRedirect("userLogin.html");
         }
     %>
 
