@@ -134,6 +134,28 @@ body{
         color: #2c2e3e;
         text-decoration: none;
     }
+    .exam .instructions form button {
+        background-image: linear-gradient(to right, #2c2e3e 0%, #414345  51%, #2c2e3e  100%)
+    }
+    .exam .instructions form button {
+        margin: 10px 0;
+        padding: 10px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: inline-block;
+        outline: none;
+    }
+    .exam .instructions form button:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (min-width: 768px) {

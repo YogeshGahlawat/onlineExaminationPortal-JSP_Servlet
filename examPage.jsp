@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <meta name="description" content="onlineExaminationPortal in Java">
     <title>EXAM INSTRUCTIONS | EXAMINATION</title>
     <link rel="stylesheet" href="./css/examPage.css">
     <script src="./js/script.js"></script>
@@ -68,7 +70,7 @@
                     <ol>
                         <li>The   students   will   have   to   enter   their user id   Number   as   ID   and Password (which has been sent to their registered email-id)</li>
                         <li>The student's details appear on the screen, which will be verified by the student</li>
-                        <li>The studentwill get Instructions to guide through the test</li>
+                        <li>The student will get Instructions to guide through the test</li>
                         <li>The Time of the examination begins only when the 'Start Test' button is pressed</li>
                         <li>The student proceeds answering the questions one by one by clicking on the small grey circle next to the chosen answer</li>
                         <li>The examinee can move to First, Last, Previous, Next and unanswered questions by clicking  on  the  buttons  with  respective  labels  displayed  on  screen  throughout  the test</li>
@@ -81,7 +83,7 @@
                     <ol>
                         <li>Student failsto appear for exam within specified timings</li>
                         <li>Student doesnot appear the papers</li>
-                        <li>Student appearsfor exam late / face lack of time</li>
+                        <li>Student appears for exam late / face lack of time</li>
                         <li>Student ignores instructionsand rules</li>
                         <li>Student does not submit the exam properly</li>
                         <li>Student face internet of power failure problems</li>
@@ -89,6 +91,7 @@
                 </ol>
 
                 <table>
+                    <h2>Today's schedule</h2>
                     <tr>
                         <th>s. no.</th>
                         <th>exam code</th>
@@ -102,8 +105,6 @@
                         java.util.Date date=new java.util.Date();
                         java.sql.Date sqlDate=new java.sql.Date(date.getTime());
                         java.sql.Time sqlTime = new java.sql.Time(date.getTime());
-                        out.println(sqlTime);
-
 
                         try{
                             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
@@ -132,6 +133,9 @@
                         }
                     %>
                 </table>
+                <form action="startExam" method="POST">
+                    <button type="submit">click to start exam</button>
+                </form>
             </div>
         </div>
 

@@ -168,4 +168,14 @@
         <url-pattern>/enrollStudent</url-pattern>
     </servlet-mapping>
 
+    <!-- servlet configuration for starting exam -->
+    <servlet>
+        <servlet-name>startExam</servlet-name>
+        <servlet-class>startExam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>startExam</servlet-name>
+        <url-pattern>/startExam</url-pattern>
+    </servlet-mapping>
+
 </web-app>
