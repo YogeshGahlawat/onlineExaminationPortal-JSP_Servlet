@@ -1,4 +1,3 @@
-// navigation functions
 // function to hide the navigation panal
 function hideMenu(){
     document.getElementById("menu").style.display="none";
@@ -9,39 +8,7 @@ function showMenu(){
     document.getElementById("menu").style.display="flex";
 }
 
-// function to validate the form data for admin login
-function validateCredentials(){
-    let id = document.getElementById("id").value;
-    let password = document.getElementById("password").value;
-
-    if(id <=0 && password === ""){
-        alert("please provide the login credentials")
-    } else if(id<=0){
-        alert("please enter your valid login id")
-    } else if( password === ""){
-        alert("please enter your valid password")
-    }
-}
-
-function validateMail(){
-    let email = document.getElementById("email").value;
-    
-    if( email === ""){
-        alert("please enter your valid email")
-    }
-}
-
-function validatePassword(){
-    let email = document.getElementById("email").value;
-    
-    if( email === ""){
-        alert("please enter your valid password")
-    } else if( email.length <6 || email.length >8){
-        alert("password must be between 6 to 8 character long")
-    }
-}
-
-// enable the admin profile fields
+// enable the admin/user profile fields
 function enable(){
     document.getElementById("email").disabled = false;
     document.getElementById("password").disabled = false;
@@ -50,11 +17,49 @@ function enable(){
     document.getElementById("btn3").disabled = false;
 }
 
-// diable the admin profile fields
+// diable the admin/user profile fields
 function disable(){
     document.getElementById("email").disabled = true;
     document.getElementById("password").disabled = true;
     document.getElementById("btn1").disabled = false;
     document.getElementById("btn2").disabled = true;
     document.getElementById("btn3").disabled = true;
+}
+
+// function to validateMail
+function validateMail(){
+    let mail = document.getElementById("email");
+
+    if(mail.value == ""){
+        alert("EMAIL FIELD MUST NOT BE EMPTY");
+        mail.focus();
+    }
+}
+
+// function to validateMail
+function validatePassword(){
+    let password = document.getElementById("password");
+
+    if(password.value == ""){
+        alert("PASSWORD FIELD MUST NOT BE EMPTY");
+        password.focus();
+    }
+}
+
+// function to validateMail
+function validateID(){
+    let id = document.getElementById("id");
+
+    if(id.value == "" || id.value == 0){
+        alert("ID FIELD MUST NOT BE EMPTY");
+    }
+}
+
+// function to validateMail
+function validateName(){
+    let name = document.getElementById("name");
+
+    if(name.value == ""){
+        alert("NAME FIELD MUST NOT BE EMPTY");
+    }
 }

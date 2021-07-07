@@ -57,14 +57,14 @@
                         <label for="">name</label>
                         <div class="input-fields">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="name" id="name" placeholder="name">
+                            <input type="text" name="name" id="name" placeholder="name" onfocusout="validateName()">
                         </div>
                     </div>
                     <div class="input">
                         <label for="">email</label>
                         <div class="input-fields">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" name="email" id="email" placeholder="email address">
+                            <input type="email" name="email" id="email" placeholder="email address" onfocusout="validateMail()">
                         </div>
                     </div>
                     <button type="submit"><i class="fas fa-plus"></i>add record</button>

@@ -15,7 +15,12 @@ public class adminLogin extends HttpServlet{
         PrintWriter out = response.getWriter();
 
         // reading form data
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = 0;
+        if(request.getParameter("id") == ""){
+            id = 0;
+        } else{
+            id = Integer.parseInt(request.getParameter("id"));
+        }
         String password = request.getParameter("password");
 
         // creating connection to database

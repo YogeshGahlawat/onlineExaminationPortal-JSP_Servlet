@@ -72,14 +72,14 @@
                         <label for="">email</label>
                         <div class="input-fields">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" name="userMail" id="email" value=<%=session.getAttribute("userMail")%> disabled>
+                            <input type="email" name="userMail" id="email" value=<%=session.getAttribute("userMail")%>  onfocusout="validateMail()" disabled>
                         </div>
                     </div>
                     <div class="input">
                         <label for="">password</label>
                         <div class="input-fields">
                             <i class="fas fa-lock"></i>
-                            <input type="text" name="userPassword" id="password" value=<%=session.getAttribute("userPassword")%> disabled>
+                            <input type="text" name="userPassword" id="password" value=<%=session.getAttribute("userPassword")%>  onfocusout="validatePassword()" disabled>
                         </div>
                     </div>
                     <button type="button" id="btn1" onclick="enable()" ><i class="fas fa-edit"></i>edit</button>
