@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
 
 *{
-    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif; scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 0){
@@ -22,6 +22,7 @@
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.9);
+        z-index: 100;
     }
     nav a{
         text-decoration: none;
@@ -57,7 +58,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -112,6 +113,76 @@
         text-decoration: none;
         font-size: 2em;
     }
+
+    /* Home Section */
+    .home{
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    .home div{
+        padding: 0 20px;
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .home .content h2, .home .content p{
+        padding: 10px;
+    }
+    .home .image img{
+        transform: scale(1.2);
+        position: relative;
+        z-index: 0;
+    }
+
+    /* exam process */
+    .process{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-transform: uppercase;
+        color: #2c2e3e;
+    }
+    .process h2{
+        margin: 20px 0;
+        text-align: center;
+    }
+    .process .steps{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .process .steps .step{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .process .steps .step i, .process .steps .step h3, .process .steps .step p{
+        margin: 10px 0;
+    }
+    .process .steps .step i{
+        font-size: 5em;
+    }
+    .process .steps .step p{
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -165,6 +236,28 @@
     nav .desktop-menu a:hover{
         border-bottom: 1px solid #eee;
     }
+
+    /* home section */
+    .home {
+        flex-direction: row;
+        height: 80vh;
+        justify-content: space-around;
+    }
+    .home div{
+        width: 50%;
+        align-items: center;
+    }
+    .home .image img{
+        transform: scale(1.1);
+    }
+
+    /* exam process */
+    .process h2{
+        font-size: 1.5em;
+    }
+    .process .steps{
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -176,5 +269,48 @@
     nav a{
         font-size: 1.2em;
     }
+
+    /* Home section */
+    .home .content h2{
+        font-size: 2em;
+    }
+    .home .content p{
+        font-size: 1.2em;
+    }
+    .home .image img{
+        transform: scale(1.2);
+    }
+
+    /* exam process */
+    .process{
+        width: 100%;
+        height: 80vh;
+    }
+    .process h2{
+        position: relative;
+        top: -10vh;
+        font-size: 2.5em;
+    }
+    .process .steps{
+        flex-direction: row;
+    }
+    .process .steps .step{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /* Home Section */
+    .home .content h2{
+        font-size: 2.5em;
+    }
+    .home .image img{
+        transform: scale(1.5);
+    }
     
+    /* exam process */
+    .process{
+        height: 100vh;
+    }
 }
