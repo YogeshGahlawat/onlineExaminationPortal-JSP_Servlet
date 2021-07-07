@@ -183,6 +183,41 @@
     .process .steps .step p{
         text-align: center;
     }
+
+    /* footer section */
+    footer{
+        background-color: rgba(0, 0, 0, .9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color: #eee;
+        text-transform: uppercase;
+    }
+    footer div{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div h3{
+        border-bottom: 2px solid #eee;
+    }
+    footer div div a{
+        text-decoration: none;        
+        color: #eee;
+        width: fit-content;
+        margin: 5px 0;
+    }
+    footer div div a i{
+        margin-right: 10px;
+    }
+    footer div div a:hover{
+        border-bottom: 1px solid #eee;
+    }
+    footer div div a#address:hover{
+        border: none;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -257,6 +292,20 @@
     }
     .process .steps{
         width: 90%;
+    }
+
+    /* footer section */
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    footer div{
+        align-items: flex-start;
+        margin: 0 10px;
+    }
+    footer div div{
+        align-items: flex-start;
     }
 }
 
