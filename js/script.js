@@ -32,7 +32,6 @@ function validateMail(){
 
     if(mail.value == ""){
         alert("EMAIL FIELD MUST NOT BE EMPTY");
-        mail.focus();
     }
 }
 
@@ -42,13 +41,12 @@ function validatePassword(){
 
     if(password.value == ""){
         alert("PASSWORD FIELD MUST NOT BE EMPTY");
-        password.focus();
     }
 }
 
 // function to validateMail
 function validateID(){
-    let id = document.getElementById("id");
+	let id = document.getElementById("id");
 
     if(id.value == "" || id.value == 0){
         alert("ID FIELD MUST NOT BE EMPTY");
@@ -62,4 +60,14 @@ function validateName(){
     if(name.value == ""){
         alert("NAME FIELD MUST NOT BE EMPTY");
     }
+}
+
+// function to validate login credentials
+function validateLogin(){
+	let id = document.getElementById("id");
+    let password = document.getElementById("password");
+
+	if(id.value == 0 || id.value == "" || password.value == ""){
+        alert("FIELDS MUST NOT BE EMPTY");
+	}
 }

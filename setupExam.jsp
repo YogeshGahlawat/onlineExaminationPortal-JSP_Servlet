@@ -59,7 +59,7 @@
                     <div class="input-field">
                         <label for="">Select exam</label>
                         <div class="input">
-                            <select name="examCode" id="">
+                            <select name="examCode" id="" required>
                                 <option value="" selected>NONE</option>
                                 <%
                                     try{
@@ -86,42 +86,42 @@
                     <div class="input-field">
                         <label for="">Question statement</label>
                         <div class="input">
-                            <input type="text" name="statement" id="" placeholder="question statement">
+                            <input type="text" name="statement" id="" placeholder="question statement" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">option 1</label>
                         <div class="input">
-                            <input type="text" name="option1" id="" placeholder="option1">
+                            <input type="text" name="option1" id="" placeholder="option1" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">option 2</label>
                         <div class="input">
-                            <input type="text" name="option2" id="" placeholder="option2">
+                            <input type="text" name="option2" id="" placeholder="option2" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">option 3</label>
                         <div class="input">
-                            <input type="text" name="option3" id="" placeholder="option3">
+                            <input type="text" name="option3" id="" placeholder="option3" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">option 4</label>
                         <div class="input">
-                            <input type="text" name="option4" id="" placeholder="option4">
+                            <input type="text" name="option4" id="" placeholder="option4" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">correct option</label>
                         <div class="input">
-                            <input type="text" name="correctOption" id="" placeholder="correct option">
+                            <input type="text" name="correctOption" id="" placeholder="correct option" required>
                         </div>
                     </div>
 

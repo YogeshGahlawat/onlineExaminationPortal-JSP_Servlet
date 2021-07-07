@@ -55,7 +55,7 @@
                 <a href="listExam.jsp"><i class="fas fa-list"></i>list all exams</a>
                 <form action="searchExam.jsp" method="POST">
                     <div class="input" title="EXAMCODE FOR SEARCHING">
-                        <input type="text" name="searchExam" id="searchExam" placeholder="search exam">
+                        <input type="text" name="searchExam" id="searchExam" placeholder="search exam" required>
                         <button type="submit"><i class="fas fa-search"></i>Search</button>
                     </div>
                 </form>
@@ -66,19 +66,19 @@
                     <div class="input">
                         <label for="">exam code</label>
                         <div class="input-fields">
-                            <input type="text" name="code" id="code" placeholder="exam code">
+                            <input type="text" name="code" id="code" placeholder="exam code" required>
                         </div>
                     </div>
                     <div class="input">
                         <label for="">exam title</label>
                         <div class="input-fields">
-                            <input type="text" name="title" id="title" placeholder="exam title">
+                            <input type="text" name="title" id="title" placeholder="exam title" required>
                         </div>
                     </div>
                     <div class="input">
                         <label for="">No of questions</label>
                         <div class="input-fields">
-                            <input type="number" name="number" id="number" placeholder="no of questions">
+                            <input type="number" name="number" id="number" placeholder="no of questions" required>
                         </div>
                     </div>
                     <button type="submit"><i class="fas fa-plus"></i>create exam</button>

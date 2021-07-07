@@ -19,14 +19,14 @@
                 <label for="">user id</label>
                 <div class="input-fields">
                     <i class="fas fa-user"></i>
-                    <input type="number" name="id" id="id" placeholder="id">
+                    <input type="number" name="id" id="id" placeholder="id" onfocusout="validateID()" required>
                 </div>
             </div>
             <div class="input">
                 <label for="">password</label>
                 <div class="input-fields">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" placeholder="password">
+                    <input type="password" name="password" id="password" placeholder="password" onfocusout="validatePassword()" required>
                 </div>
             </div>
             <button type="submit">sign in<i class="fas fa-sign-in-alt"></i></button>

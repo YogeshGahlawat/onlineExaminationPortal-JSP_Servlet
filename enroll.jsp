@@ -54,7 +54,7 @@
                     <div class="input-field">
                         <label for="">Select exam to enroll</label>
                         <div class="input">
-                            <select name="examCode" id="">
+                            <select name="examCode" id="" required>
                                 <option value="NONE" selected>NONE</option>
                                 <%
                                     try{

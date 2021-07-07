@@ -14,19 +14,19 @@
     <!-- Admin Login panal -->
     <div class="login">
         <h2>admin login</h2>
-        <form action="adminLogin" method="POST">
+        <form action="adminLogin" method="POST" onsubmit="validateLogin()">
             <div class="input">
                 <label for="">admin id</label>
                 <div class="input-fields">
                     <i class="fas fa-user"></i>
-                    <input type="number" name="id" id="id" placeholder="id" onfocusout="validateID()">
+                    <input type="number" name="id" id="id" placeholder="id" onfocusout="validateID()" required>
                 </div>
             </div>
             <div class="input">
                 <label for="">password</label>
                 <div class="input-fields">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" placeholder="password" onfocusout="validatePassword()">
+                    <input type="password" name="password" id="password" placeholder="password" onfocusout="validatePassword()" required>
                 </div>
             </div>
             <button type="submit">sign in<i class="fas fa-sign-in-alt"></i></button>

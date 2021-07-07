@@ -59,7 +59,7 @@
                     <div class="input-field">
                         <label for="">Select exam</label>
                         <div class="input">
-                            <select name="examCode" id="">
+                            <select name="examCode" id="" required>
                                 <option value="" selected>NONE</option>
                                 <%
                                     try{
@@ -86,21 +86,21 @@
                     <div class="input-field">
                         <label for="">exam date</label>
                         <div class="input">
-                            <input type="date" name="startDate" id="" placeholder="exam start date">
+                            <input type="date" name="startDate" id="" placeholder="exam start date" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">exam start time</label>
                         <div class="input">
-                            <input type="time" name="startTime" id="" placeholder="exam start time">
+                            <input type="time" name="startTime" id="" placeholder="exam start time" required>
                         </div>
                     </div>
 
                     <div class="input-field">
                         <label for="">exam end time</label>
                         <div class="input">
-                            <input type="time" name="endTime" id="" placeholder="exam end time">
+                            <input type="time" name="endTime" id="" placeholder="exam end time" required>
                         </div>
                     </div>
 
