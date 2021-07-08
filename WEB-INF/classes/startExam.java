@@ -36,9 +36,10 @@ public class startExam extends HttpServlet {
                     session.setAttribute("endTime", rs.getTime("endTime"));
                 }
                 
-                request.getRequestDispatcher("userPage.jsp").include(request, response);
+                request.getRequestDispatcher("exam.jsp").include(request, response);
 
             } catch (Exception e){
+                out.println(e.toString());
                 out.println("<h3 style='text-align: center; text-transform: uppercase; color: red;'>error occured, please contact admin to continue....</h3>");
                 request.getRequestDispatcher("userPage.jsp").include(request, response);
             }

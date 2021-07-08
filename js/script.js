@@ -71,3 +71,27 @@ function validateLogin(){
         alert("FIELDS MUST NOT BE EMPTY");
 	}
 }
+
+// next function to switch to next question
+function next(){
+
+    var firstForm, lastForm, form;
+    firstForm = Document.getElementById("firstForm");
+    lastForm = Document.getElementById("lastForm");
+    form = Document.getElementById("form");
+
+    firstForm.style.left="100%";
+    form.style.left="0";
+}
+
+// next function to switch to next question
+function previous(){
+
+    var firstForm, lastForm, form;
+    firstForm = Document.getElementById("firstForm");
+    lastForm = Document.getElementById("lastForm");
+    form = Document.getElementById("form");
+
+    firstForm.style.left="0";
+    form.style.left="100%";
+}

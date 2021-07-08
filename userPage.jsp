@@ -1,3 +1,5 @@
+<%@ page import = "java.sql.*, java.io.*" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="60">
     <meta name="description" content="onlineExaminationPortal in Java">
-    <title>ADMIN PAGE | EXAMINATION</title>
+    <title>USER PAGE | EXAMINATION</title>
     <link rel="stylesheet" href="./css/userPage.css">
     <script src="./js/script.js"></script>
 </head>
@@ -46,8 +48,36 @@
         <!-- user profile section -->
         <div class="user">
             <div class="welcome">
-                <h2>welcome back, Mr.<%=session.getAttribute("name")%></h2>
-            </div>    
+                <h2>welcome back, Mr. <%=session.getAttribute("name")%></h2>
+            </div>
+
+            <!-- score card -->
+            <div class="score">
+                <h3>score card</h3>
+                <table>
+                    <tr>
+                        <th>exam code</th>
+                        <th>marks</th>
+                    </tr>
+                    <%
+                    try{
+                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
+                        PreparedStatement psmt = conn.prepareStatement("select distinct(score), score.examCode from score, enrollment, user where score.examCode = enrollment.examCode and score.userID = user.userID");
+                        ResultSet rs = psmt.executeQuery();
+                        while(rs.next()){
+                            %>
+                            <tr>
+                                <td><%=rs.getString("examCode")%></td>
+                                <td><%=rs.getInt("score")%></td>
+                            </tr>
+                            <%
+                        }
+                    } catch(Exception e){
+                        out.println("fetching records failed");
+                    }
+                    %>
+                </table>
+            </div>
         </div>
     <%
     } else{

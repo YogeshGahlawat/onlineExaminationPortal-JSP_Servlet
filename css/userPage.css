@@ -80,17 +80,49 @@ body{
         top: 10%;
         left: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 0;
     }
+    .user div{
+        margin: 10px 0;
+    }
     .user .welcome{
         width: 100%;
         background-color: #fff;
-        padding: 20px;
+        padding: 10px;
     }
     .user .welcome h2{
         text-transform: uppercase;
+    }
+    .user .score{
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase
+    }
+    .user .score h3{
+        background-color: #2c2e3e;
+        color: #eee;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .user .score table{
+        border: 1px solid #2c2e3e;
+        margin: 10px 0;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .user .score table th, .user .score table td {
+        border: 1px solid #2c2e3e;
+        text-align: center;
+        padding: 5px 10px;
     }
 }
 
@@ -136,7 +168,7 @@ body{
         width: 70%;
         left: 30%;
     }
-    .user .welcome{
+    .user .welcome, .user .score{
         width: 80%;
     }
 }
