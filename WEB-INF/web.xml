@@ -178,4 +178,24 @@
         <url-pattern>/startExam</url-pattern>
     </servlet-mapping>
 
+    <!-- servlet configuration for counting score for exam -->
+    <servlet>
+        <servlet-name>exam</servlet-name>
+        <servlet-class>exam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exam</servlet-name>
+        <url-pattern>/exam</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet configuration for user logout -->
+    <servlet>
+        <servlet-name>userLogout</servlet-name>
+        <servlet-class>userLogout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userLogout</servlet-name>
+        <url-pattern>/userLogout</url-pattern>
+    </servlet-mapping>
+
 </web-app>

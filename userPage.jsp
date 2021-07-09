@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60">
     <meta name="description" content="onlineExaminationPortal in Java">
     <title>USER PAGE | EXAMINATION</title>
     <link rel="stylesheet" href="./css/userPage.css">
@@ -30,7 +29,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
         <div class="menu" id="menu">
@@ -41,7 +40,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
 
@@ -51,32 +50,53 @@
                 <h2>welcome back, Mr. <%=session.getAttribute("name")%></h2>
             </div>
 
-            <!-- score card -->
-            <div class="score">
-                <h3>score card</h3>
-                <table>
-                    <tr>
-                        <th>exam code</th>
-                        <th>marks</th>
-                    </tr>
+            <div class="dashboard">
+                <div class="total">
+                    <h2>you enrolled for</h2>
                     <%
-                    try{
-                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
-                        PreparedStatement psmt = conn.prepareStatement("select distinct(score), score.examCode from score, enrollment, user where score.examCode = enrollment.examCode and score.userID = user.userID");
-                        ResultSet rs = psmt.executeQuery();
-                        while(rs.next()){
-                            %>
-                            <tr>
-                                <td><%=rs.getString("examCode")%></td>
-                                <td><%=rs.getInt("score")%></td>
-                            </tr>
-                            <%
-                        }
-                    } catch(Exception e){
-                        out.println("fetching records failed");
-                    }
+                        try{
+                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
+                            PreparedStatement psmt = conn.prepareStatement("select count(distinct(examCode)) from  enrollment, user where enrollment.userID = user.userID");
+                            ResultSet rs = psmt.executeQuery();
+                            while(rs.next()){
                     %>
-                </table>
+                            <h1><%=rs.getInt(1)%></h1>
+                    <%
+                            }
+                        } catch(Exception e){
+                            out.println(e.toString());
+                            out.println("fetching records failed");
+                        }
+                    %>
+                    <h2>courses</h2>
+                </div>
+                <!-- score card -->
+                <div class="score">
+                    <h3>score card</h3>
+                    <table>
+                        <tr>
+                            <th>exam code</th>
+                            <th>marks</th>
+                        </tr>
+                        <%
+                            try{
+                                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlineExaminationPortal", "root", "");
+                                PreparedStatement psmt = conn.prepareStatement("select distinct(score), score.examCode from score, enrollment, user where score.examCode = enrollment.examCode and score.userID = user.userID");
+                                ResultSet rs = psmt.executeQuery();
+                                while(rs.next()){
+                        %>
+                                <tr>
+                                    <td><%=rs.getString("examCode")%></td>
+                                    <td><%=rs.getInt("score")%></td>
+                                </tr>
+                        <%
+                                }
+                            } catch(Exception e){
+                                out.println("fetching records failed");
+                            }
+                        %>
+                    </table>
+                </div>
             </div>
         </div>
     <%

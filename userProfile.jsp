@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60">
     <meta name="description" content="onlineExaminationPortal in Java">
     <title>ADMIN PROFILE | EXAMINATION</title>
     <link rel="stylesheet" href="./css/userProfile.css">
@@ -28,7 +27,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
         <div class="menu" id="menu">
@@ -39,7 +38,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
 
@@ -73,7 +72,7 @@
                         <label for="">password</label>
                         <div class="input-fields">
                             <i class="fas fa-lock"></i>
-                            <input type="text" name="password" id="password" value=<%=session.getAttribute("password")%> onfocusout="validatePassword()" required disabled>
+                            <input type="text" name="password" id="password" value=<%=session.getAttribute("password")%> onfocusout="validatePassworde()" required disabled>
                         </div>
                     </div>
                     <button type="button" id="btn1" onclick="enable()" ><i class="fas fa-edit"></i>edit</button>

@@ -33,7 +33,6 @@ public class adminLogin extends HttpServlet{
                 if( ((id!=0) && (id==rs.getInt("adminID"))) && ((!(password.equals(""))) && (password.equals(rs.getString("password")))) ){
 
                     HttpSession session = request.getSession();
-                    session.setMaxInactiveInterval(90);
                     session.setAttribute("id", rs.getInt("adminID"));
                     session.setAttribute("name", rs.getString("adminName"));
                     session.setAttribute("email", rs.getString("adminMail"));

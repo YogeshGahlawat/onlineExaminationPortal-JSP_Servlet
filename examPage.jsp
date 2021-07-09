@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60">
     <meta name="description" content="onlineExaminationPortal in Java">
     <title>EXAM INSTRUCTIONS | EXAMINATION</title>
     <link rel="stylesheet" href="./css/examPage.css">
@@ -31,7 +30,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
         <div class="menu" id="menu">
@@ -42,7 +41,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
 

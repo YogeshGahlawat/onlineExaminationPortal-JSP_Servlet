@@ -80,8 +80,9 @@ function next(){
     lastForm = Document.getElementById("lastForm");
     form = Document.getElementById("form");
 
-    firstForm.style.left="100%";
+    firstForm.style.left="-100%";
     form.style.left="0";
+    lastForm.style.left="0";
 }
 
 // next function to switch to next question
@@ -94,4 +95,5 @@ function previous(){
 
     firstForm.style.left="0";
     form.style.left="100%";
+    lastForm.style.left="100%";
 }

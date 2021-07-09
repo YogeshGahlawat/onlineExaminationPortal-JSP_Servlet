@@ -35,7 +35,6 @@ public class userLogin extends HttpServlet{
                 if( ((id!=0) && (id==rs.getInt("userID"))) && ((!(password.equals(""))) && (password.equals(rs.getString("password")))) ){
 
                     HttpSession session = request.getSession();
-                    session.setMaxInactiveInterval(90);
                     session.setAttribute("id", rs.getInt("userID"));
                     session.setAttribute("name", rs.getString("userName"));
                     session.setAttribute("email", rs.getString("userMail"));
@@ -49,6 +48,7 @@ public class userLogin extends HttpServlet{
                 }
             }
         } catch(Exception e){
+            out.println(e.toString());
             out.println("<h3 style='text-align: center; text-transform: uppercase; color:red;'>login failed</h3>");
             request.getRequestDispatcher("userLogin.html").include(request, response);
         }

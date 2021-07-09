@@ -43,15 +43,15 @@ body{
         width: 100%;
         height: 100%;
         position: relative;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .exam .questions form{
         width: 100%;
-        position: absolute;
+        /* position: absolute; */
     }
-    .exam .questions #form, .exam .questions #lastForm{
+    /* .exam .questions #form, .exam .questions #lastForm{
         right: -100%;
-    }
+    } */
     .exam .questions form .input-field{
         margin: 20px 0;
         border: 1px solid #2c2e3e;

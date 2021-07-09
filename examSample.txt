@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button>next question</button>
+                            <button onclick="next()">next question</button>
                         </form>
                         <%
                         } else if(rs.isLast()) {
@@ -106,6 +106,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <button  onclick="previous()">previous question</button>
                             <button type="submit">submit</button>
                         </form>
                         <%
@@ -132,8 +133,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button>previous question</button>
-                            <button>next question</button>
+                            <button onclick="previous()">previous question</button>
+                            <button onclick="next()">next question</button>
                         </form>
                         <%    
                         }

@@ -31,7 +31,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </nav>
         <div class="menu" id="menu">
@@ -42,7 +42,7 @@
                 <a href="enroll.jsp"><i class="fas fa-plus"></i>enroll exam</a>
                 <a href="examDates.jsp"><i class="fas fa-calendar-alt"></i>exam date</a>
                 <a href="examPage.jsp"><i class="fas fa-play"></i>start exam</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i>log out</a>
+                <a href="userLogout"><i class="fas fa-sign-out-alt"></i>log out</a>
             </div>
         </div>
 
@@ -87,8 +87,7 @@
     <%
     } else{
         session.invalidate();
-        response.setHeader("Cache-Control","no-cache");
-        response.setHeader("Cache-Control","no-store");
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setDateHeader("Expires", 0);
         response.sendRedirect("userLogin.html");
         out.println("<h3 style='text-align: center; text-transform: uppercase; color:red;'>session expired! Please login again!</h3>");
