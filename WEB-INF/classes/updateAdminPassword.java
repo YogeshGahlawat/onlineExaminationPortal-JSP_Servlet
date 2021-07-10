@@ -30,6 +30,7 @@ public class updateAdminPassword extends HttpServlet{
 
             out.println("<h3 style='text-align: center; color:green;'>ADMIN PASSWORD UPDATED SUCCESSFULLY</h3>");
         } catch(Exception e){
+            out.println(e.toString());
             out.println("<h3 style='text-align: center; color:red;'>ADMIN PASSWORD UPDATION FAILED</h3>");
         }
         request.getRequestDispatcher("adminLogin.html").include(request, response);

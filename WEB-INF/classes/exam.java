@@ -27,7 +27,8 @@ public class exam extends HttpServlet {
                     numberOfQuestion = rs.getInt(1);
                 }
 
-                int count = 1;
+                int count = 1, marks = 0;
+
                 while(count<=numberOfQuestion){
                     
                     // reading form data
@@ -39,7 +40,7 @@ public class exam extends HttpServlet {
                     psmt.setString(2, option);
                     psmt.setInt(3, Integer.parseInt(session.getAttribute("id").toString()));
                     rs = psmt.executeQuery();
-                    int marks = 0;
+                    
                     while(rs.next()){
                         // out.println("score: " + rs.getInt(1));
                         if(rs.getInt(1) == 1){

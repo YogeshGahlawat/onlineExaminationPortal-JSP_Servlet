@@ -41,7 +41,7 @@ public class userMail extends HttpServlet{
 
                     Session session = Session.getInstance(properties, new javax.mail.Authenticator(){
                         protected PasswordAuthentication getPasswordAuthentication(){
-                            return new PasswordAuthentication("sender_mail@gmail.com", "password_here");
+                            return new PasswordAuthentication("mail@gmail.com", "password");
                         }
                     });
 

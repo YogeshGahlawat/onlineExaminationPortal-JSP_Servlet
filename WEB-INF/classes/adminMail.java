@@ -40,7 +40,7 @@ public class adminMail extends HttpServlet{
 
                     Session session = Session.getInstance(properties, new javax.mail.Authenticator(){
                         protected PasswordAuthentication getPasswordAuthentication(){
-                            return new PasswordAuthentication("yogeshgahlawat2425@gmail.com", "password_here");
+                            return new PasswordAuthentication("mail@gmail.com", "password");
                         }
                     });
 
