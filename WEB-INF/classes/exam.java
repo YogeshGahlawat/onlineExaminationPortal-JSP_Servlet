@@ -42,19 +42,24 @@ public class exam extends HttpServlet {
                     rs = psmt.executeQuery();
                     
                     while(rs.next()){
-                        // out.println("score: " + rs.getInt(1));
                         if(rs.getInt(1) == 1){
                             marks+=1;
                         }
                     }
-                    out.println("total marks: " + marks);
-                    out.println("<br>");
                     count++;
                 }
+
+                psmt = conn.prepareStatement("insert into score(examCode, userID, score) values(?, ?, ?)");
+                psmt.setString(1, session.getAttribute("examCode").toString());
+                psmt.setInt(2, Integer.parseInt(session.getAttribute("id").toString()));
+                psmt.setInt(3, marks);
+                psmt.executeUpdate();
+
             } catch (Exception e){
                 out.println(e.toString());
                 out.println("<h3 style='text-align: center; text-transform: uppercase; color: red;'>processing exam failed</h3>");
             }
+            request.getRequestDispatcher("userPage.jsp").include(request, response);
             
         } else {
             session.invalidate();
