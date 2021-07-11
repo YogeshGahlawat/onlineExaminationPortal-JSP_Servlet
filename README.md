@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README | EXAMINATION</title>
-</head>
-<body>
-
-    <h3>ONLINE EXAMINATION PORTAL</h3>
+<h3>ONLINE EXAMINATION PORTAL</h3>
     <hr>
     <div class="main">
         <h3>PROJECT REQUIREMENTS</h3>
@@ -35,14 +25,14 @@
                 <li>userMail.java ( WEB-INF/classes )</li>
             </ol>
         </ol>
-
+    <hr>
         <h3>SCREENSHOTS</h3>
         <div class="images">
             <h3>HOME PAGE</h3>
             <img src="./images/Home1.png" alt="">
             <img src="./images/Home2.png" alt="">
             <img src="./images/Home3.png" alt="">
-
+            <hr>
             <h3>ADMIN PAGE</h3>
             <img src="./images/adminLogin.png" alt="">
             <img src="./images/addUser.png" alt="">
@@ -51,7 +41,7 @@
             <img src="./images/searrchExam.png" alt="">
             <img src="./images/addQuestion.png" alt="">
             <img src="./images/schedule.png" alt="">
-            
+            <hr>
             <h3>USER PAGE</h3>
             <img src="./images/userDashboard.png" alt="">
             <img src="./images/enrollment.png" alt="">
@@ -60,7 +50,3 @@
             <img src="./images/exam.png" alt="">
         </div>
     </div>
-</body>
-</html>
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
