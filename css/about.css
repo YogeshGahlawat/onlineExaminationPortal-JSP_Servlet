@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box; letter-spacing: 2px; word-spacing: 2px; font-family: 'Amaranth', sans-serif; scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 0){
+        
+    /* header section */
+    #header{
+        display: none;
+    }
+    
+    /* Navigation panal */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 10vh;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 100;
+    }
+    nav a{
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+    nav a#name{
+        position: relative;
+        left: 20px;
+    }
+    nav #desktop-menu{
+        display: none;
+    }
+    nav .mobile-menu{
+        position: relative;
+        right: 20px;
+    }
+    nav .mobile-menu div{
+        width: 30px;
+        height: 3px;
+        background-color: #eee;
+        margin: 5px;
+    }
+    nav .mobile-menu div#bar3{
+        width: 20px;
+    }
+    #menu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: #24252a;
+        z-index: 100;
+        overflow-y: auto;
+    }
+    .menu #clsoebtn{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: #eee;
+        font-size: 3em;
+        cursor: pointer;
+    }
+    .menu div{
+        margin: 20px 0;
+    }
+    .menu div.desktop-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu div.desktop-menu a{
+        display: block;
+        padding: 10px 0;
+        color: #eee;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .menu div.desktop-menu a:hover{
+        border-bottom: 1px solid #eee;
+    }
+    .menu div.login a{
+        text-decoration: none;
+        color: #eee;
+        text-transform: uppercase;
+        border: 1px solid #eee;
+        padding: 5px 10px;
+    }
+    .menu div.login a i{
+        margin-left: 5px;
+    }
+    .menu div.login a:first-of-type{
+        background-color: #eee;
+        color: #2c2e3e;
+    }
+    .menu div.social a{
+        color: #eee;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    
+    /* Home Section */
+    .home{
+        width: 100%;
+        height: 30vh;
+        background: url("../images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg") no-repeat;
+        background-size: cover;
+        color: #2c2e3e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    /* about us secion */
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        padding: 20px;
+    }
+    .about .about-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #2c2e3e;
+    }
+    .about .about-menu h2{
+        padding: 20px 0;
+        text-transform: uppercase;
+    }
+    .about .about-menu a{
+        margin: 5px 0;
+        color: #24252a;
+        text-decoration: none;
+    }
+    .about .about-menu a:hover{
+        border-bottom: 1px solid #24252a;
+    }
+    .about .about-content{
+        color: #2c2e3e;
+    }
+    .about .about-content h2{
+        padding: 20px 0;
+        text-transform: uppercase;
+    }
+    .about .about-content p{
+        margin: 5px 0;
+        color: #24252a;
+        text-align: justify;
+    }
+
+    /* footer section */
+    footer{
+        background-color: rgba(0, 0, 0, .9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color: #eee;
+        text-transform: uppercase;
+    }
+    footer div{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div h3{
+        border-bottom: 2px solid #eee;
+    }
+    footer div div a{
+        text-decoration: none;        
+        color: #eee;
+        width: fit-content;
+        margin: 5px 0;
+    }
+    footer div div a i{
+        margin-right: 10px;
+    }
+    footer div div a:hover{
+        border-bottom: 1px solid #eee;
+    }
+    footer div div a#address:hover{
+        border: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    /* header section */
+    #header{
+        display: flex;
+    }
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 8vh;
+        background-color: #2c2e3e;
+        position: relative;
+    }
+    .header a{
+        text-decoration: none;
+        color: #eee;
+        font-size: 1em;
+        text-transform: uppercase;
+        outline: none;
+    }
+    .header div.social a{
+        font-size: 1.5em;
+    }
+    .header div.login a{
+        border: 1px solid #eee;
+        padding: 10px 20px;
+    }
+    .header div.login a i{
+        margin-left: 10px;
+    }
+    .header div.login a:first-of-type{
+        background-color: #eee;
+        color: #2c2e3e;
+    }
+
+    /* Navigation Menu */
+    nav #mobile-menu{
+        display: none;
+    }
+    nav #desktop-menu{
+        display: flex;
+        position: relative;
+        right: 20px;
+    }
+    nav .desktop-menu a{
+        margin: 0 10px;
+    }
+    nav .desktop-menu a:hover{
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Home Section */
+    .home{
+        font-size: 1.5em;
+        height: 50vh;
+    }
+
+    /* about us secion */
+    .about{
+        flex-direction: row;
+    }
+    .about .about-menu{
+        background-color: #24252a;
+        color: #eee;
+        width: 30%;
+        align-items: flex-end;
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+    .about .about-menu a{
+        color: #eee;
+    }
+    .about .about-menu a:hover{
+        border-color: #eee;
+    }
+    .about .about-content{
+        width: 60%;
+    }
+
+    /* footer section */
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    footer div{
+        align-items: flex-start;
+        margin: 0 10px;
+    }
+    footer div div{
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    /* Navigation Menu */
+    nav{
+        justify-content: space-around;
+    }
+    nav a{
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+
+    /* Home Section */
+    .home{
+        font-size: 2em;
+        height: 50vh;
+    }
+    .home div h2{
+        font-size: 2.5em;
+    }
+    .home div h3{
+        font-size: 2em;
+    }
+    .home div h4{
+        font-size: 1.5em;
+    }
+
+    /* about us secion */
+    .about .about-menu{
+        width: 20%;
+    }
+    .about .about-content{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+
+    /* Home Section */
+    .home{
+        font-size: 2.5em;
+    }
+}
