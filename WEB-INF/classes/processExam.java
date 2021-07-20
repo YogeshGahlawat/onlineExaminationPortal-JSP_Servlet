@@ -41,7 +41,7 @@ public class processExam extends HttpServlet {
                 psmt.executeUpdate();
 
                 out.println("<h3 style='text-transform: uppercase; text-align: center; color: green;'>question added successfully</h3>");
-                request.getRequestDispatcher("publishExam.jsp").include(request, response);
+                request.getRequestDispatcher("scheduleExam.jsp").include(request, response);
             } catch(Exception e){
                 out.println("<h3 style='text-transform: uppercase; text-align: center; color: red;'>question adding failed</h3>");
                 request.getRequestDispatcher("setupExam.jsp").include(request, response);

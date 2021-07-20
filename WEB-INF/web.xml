@@ -157,6 +157,16 @@
         <servlet-name>updateUserPassword</servlet-name>
         <url-pattern>/updateUserPassword</url-pattern>
     </servlet-mapping>
+    
+    <!-- servlet configuration for updating user profile -->
+    <servlet>
+        <servlet-name>updateUserProfile</servlet-name>
+        <servlet-class>updateUserProfile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUserProfile</servlet-name>
+        <url-pattern>/updateUserProfile</url-pattern>
+    </servlet-mapping>
 
     <!-- servlet configuration for enrollment for exam -->
     <servlet>

@@ -46,7 +46,7 @@
         <div class="user">
             <div class="profile">
                 <h2>profile panal</h2>
-                <form action="updateAdminRecord" method="POST">
+                <form action="updateUserProfile" method="POST">
                     <div class="input">
                         <label for="">id</label>
                         <div class="input-fields">
